@@ -1,0 +1,37 @@
+Sr.No,Test Scenario Name,Step Num,Test Step,Expected Results
+1,User Signup,1,Navigate to the Signup page,Signup form is displayed
+,,2,Enter valid user details (email, password, etc.),User details are accepted
+,,3,Click the "Sign Up" button,User account is created and confirmation message is shown
+,,4,Attempt signup with already registered email,Error message displayed: "Email already registered"
+,,5,Submit form with missing required fields,Error message shown for each required field
+,,6,Enter invalid email format,Email validation error shown
+,,7,Enter password below minimum length,Password validation error shown
+,,8,Check input field max length enforcement,Input cannot exceed allowed length
+,,9,Test on mobile device (responsive layout),Signup form displays properly on mobile
+
+2,User Login,1,Navigate to Login page,Login form is displayed
+,,2,Enter valid credentials,User is authenticated and taken to homepage
+,,3,Enter invalid password,Authentication error displayed
+,,4,Attempt login with unregistered email,Error: "Account not found"
+,,5,Leave required fields empty,Validation errors shown for required fields
+,
+3,Product Selection and Cart Management,1,Browse available products,Product list/grid displayed
+,,2,Add product to cart,Product is added to cart and cart indicator updates
+,,3,Remove product from cart,Product is removed from cart; cart indicator updates
+,,4,Change product quantity in cart,Quantity updated; cart total recalculated
+,,5,Attempt to add out-of-stock item,Error: "Product unavailable"
+,,6,Add maximum allowed quantity,Max quantity limit enforced
+,,7,View cart on mobile device (responsive check),Cart layout and features function correctly on mobile
+
+4,Checkout Process,1,Begin checkout from cart,Checkout form is displayed
+,,2,Enter valid shipping and billing details,Details are accepted and next step proceeds
+,,3,Leave mandatory address fields empty,Error: "Required field"
+,,4,Use invalid postal code,Postal code validation error
+,,5,Attempt checkout with empty cart,Error: "No items in cart"
+
+5,Payment and Confirmation,1,Enter valid payment details and submit,Payment processed and confirmation page shown
+,,2,Enter invalid card number,Error: "Payment declined – invalid card number"
+,,3,Enter expired card details,Error: "Card expired"
+,,4,Simulate payment gateway timeout,Error: "Payment could not be processed, please try again"
+,,5,Confirm order confirmation displays order summary,Order details are correct; confirmation message and order ID shown
+

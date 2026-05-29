@@ -1,0 +1,24 @@
+{
+  "documentation": {
+    "process": "Teams may request the domain agent team to process one-hour recordings provided via a shareable link (e.g., S3 bucket). The team should be equipped to access and process the recording via the given link.",
+    "integration_note": "Ensure support for remote reading capabilities, particularly for S3 bucket links."
+  },
+  "metadata": {
+    "source_file": "transcript_Agentic AI - Status Call-20260127_121014-Meeting Recording_call.doc",
+    "file_size_bytes": 415,
+    "created": "2026-02-03T22:52:49+05:30",
+    "last_modified": "2026-02-18T18:59:49+05:30"
+  },
+  "architectural_patterns": [
+    "Integration with external storage (S3 bucket) for reading provided media data",
+    "Support for access control and permission management when accessing linked content"
+  ],
+  "domain_context": {
+    "application": "Domain agent capable of processing audio recordings from other teams",
+    "context": "Designed for collaborative use, where input data may be provided by external teams via remote links."
+  },
+  "business_rules": [
+    "The domain agent must be able to read audio/recording data passed via external links (e.g., S3 bucket).",
+    "Requests for processing remote recordings should be supported as part of inter-team service."
+  ]
+}

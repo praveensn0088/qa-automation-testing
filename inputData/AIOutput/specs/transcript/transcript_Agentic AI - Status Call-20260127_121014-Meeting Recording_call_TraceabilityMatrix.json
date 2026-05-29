@@ -1,0 +1,37 @@
+{
+  "traceability_matrix": [
+    {
+      "requirement_id": "FR-001",
+      "requirement_desc": "Accept audio processing requests via external links",
+      "frs_section": "3.1 Processing External Audio Requests",
+      "trs_section": "3.1 External Team Interface, 2. System Architecture Overview (Request Handler)",
+      "repository_component": "Request Handler (API/input gateway)",
+      "domain_context": "External recording processing collaboration, link-based submission"
+    },
+    {
+      "requirement_id": "FR-002",
+      "requirement_desc": "Authenticate and retrieve recordings securely",
+      "frs_section": "3.1/3.2 (Processing, Integration with Cloud Storage)",
+      "trs_section": "3.2 Cloud Storage Interface, 2. System Architecture (Cloud Storage Integrator)",
+      "repository_component": "Cloud Storage Integrator",
+      "domain_context": "Secure S3/cloud link access, authentication"
+    },
+    {
+      "requirement_id": "FR-003",
+      "requirement_desc": "Provide results/status to requesting team",
+      "frs_section": "3.3 Processing and Analysis Automation, 3.4 Feedback to Requester",
+      "trs_section": "3.3 Notification Interface, 2. System Architecture (Response Dispatcher)",
+      "repository_component": "Response Dispatcher",
+      "domain_context": "Process feedback loop, error/status notification"
+    },
+    {
+      "requirement_id": "FR-004",
+      "requirement_desc": "Log all requests and results for audit",
+      "frs_section": "3.3 Processing and Analysis Automation",
+      "trs_section": "3.4 Logging Interface, 2. System Architecture (Logging and Audit)",
+      "repository_component": "Logging and Audit System",
+      "domain_context": "Accountability, traceability, compliance"
+    }
+  ],
+  "validation": "All key functional and technical requirements have direct mappings to FRS/TRS document sections, concrete repository/system components, and domain context enrichments. The traceability matrix ensures both vertical and horizontal linkage for end-to-end completeness."
+}

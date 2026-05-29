@@ -1,0 +1,73 @@
+Implement End-to-End E-commerce Purchase Flow
+
+Story ID: `ECOM-101`
+Title: Implement User Signup, Login, Product Purchase, and Checkout Flow
+URL: [https://sauce-demo.myshopify.com/](https://sauce-demo.myshopify.com/)
+Priority: High
+Assignee: _[To be assigned]_
+Sprint: _[Specify sprint name or number]_
+
+---
+
+### Description
+
+As a user of the e-commerce platform,
+I want to be able to sign up, log in, browse products, add items to my cart, and complete a purchase,
+So that I can successfully buy retail products through a seamless and secure checkout experience.
+
+---
+
+### Acceptance Criteria
+
+#### Signup Functionality
+- User can access the signup page from the homepage.
+- User must be able to enter:
+  - First Name
+  - Last Name
+  - Email ID
+  - Password
+- On clicking the Submit button:
+  - A new user account is created.
+  - User is redirected to the login page or logged in automatically.
+  - Validation errors are shown for missing or invalid fields.
+
+#### Login Functionality
+- User can log in using valid email and password.
+- Incorrect credentials show an appropriate error message.
+- Successful login redirects the user to the product listing page.
+
+#### Product Selection and Cart
+- After login, user can view a list of available products.
+- User can click Add to Cart on any product.
+- The selected product appears in the My Cart section.
+- Cart should reflect:
+  - Product name
+  - Quantity
+  - Price
+  - Total amount
+
+#### Checkout Process
+- User clicks Check Out to review cart items.
+- On confirming, user proceeds to enter delivery details:
+  - Address
+  - Country
+  - City
+  - State
+  - PIN code
+  - Phone number
+- All fields are mandatory and validated.
+
+#### Payment and Confirmation
+- User enters:
+  - Card Number
+  - Expiration Date
+  - Security Code
+- On clicking Pay Now:
+  - Payment is processed (mock or real integration).
+  - User is redirected to a Confirmation Page.
+  - Confirmation page displays:
+    - Product details
+    - Delivery address
+    - Payment summary
+    - Order ID
+

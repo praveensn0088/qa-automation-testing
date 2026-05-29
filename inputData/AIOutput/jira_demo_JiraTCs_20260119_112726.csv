@@ -1,0 +1,85 @@
+Sr.No,Test Scenario Name,Step Num,Test Step,Expected Results
+1,Signup – Happy Path,1,Navigate to homepage,Homepage is displayed
+,,2,Click “Sign Up”,Signup page is displayed
+,,3,Enter valid First Name,Last Name,Email ID,Password,Fields accept entries
+,,4,Click Submit,User is registered and redirected to login or logged in automatically
+
+
+2,Signup – Missing Required Fields,1,Go to Signup page,Signup page is displayed
+,,2,Leave all fields empty,Fields are empty
+,,3,Click Submit,Error messages for all mandatory fields
+
+
+3,Signup – Invalid Email Format,1,Go to Signup page,Signup page is displayed
+,,2,Enter valid First Name,Last Name,Password but invalid Email (e.g., abc.com),All fields but Email valid
+,,3,Click Submit,Error for invalid Email format
+
+
+4,Signup – Weak Password,1,Go to Signup page,Signup page is displayed
+,,2,Enter valid info but enter a weak password (e.g., 123),Fields accepted but Password is weak
+,,3,Click Submit,Validation error for weak Password
+
+
+5,Login – Valid Credentials,1,Go to Login page,Login screen is displayed
+,,2,Enter registered Email and Password,Credentials are valid
+,,3,Click Login,User is redirected to product listing page
+
+
+6,Login – Incorrect Password,1,Go to Login page,Login screen is displayed
+,,2,Enter valid Email and incorrect Password,Password is incorrect
+,,3,Click Login,Error message for incorrect credentials, user remains on login page
+
+
+7,Login – Unregistered Email,1,Go to Login page,Login screen is displayed
+,,2,Enter unregistered Email and any Password,Email not in system
+,,3,Click Login,Error for unrecognized Email
+
+
+8,Product Selection – Add to Cart,1,Login with valid credentials,Product listing page is shown
+,,2,Click Add to Cart for a product,Item added to cart
+,,3,Open My Cart,Cart shows product name, quantity, price, total amount
+
+
+9,Cart – Multiple Products,1,Add two or more different products to cart,Each product added shows in cart
+,,2,Open My Cart,Cart lists all selected products, correct total
+
+
+10,Cart – Quantity Update (if supported),1,In Cart, update quantity for product (e.g., increase),Quantity updated
+,,2,Check Total Amount,Total is recalculated and correct
+
+
+11,Cart – Remove Product,1,In Cart, remove one product,Product removed
+,,2,Check Cart and Total,Cart updates and recalculates total
+
+
+12,Checkout – Valid Delivery Info,1,Proceed to Checkout,Checkout form appears
+,,2,Enter valid Address,Country,City,State,PIN,Phone,All fields accept entries
+,,3,Click Continue,Proceed to payment screen without error
+
+
+13,Checkout – Missing Required Delivery Info,1,At Checkout, leave one or more fields empty,Fields incomplete
+,,2,Click Continue,Error message indicates missing fields, cannot proceed
+
+
+14,Checkout – Invalid PIN or Phone,1,At Checkout, enter alphabetic characters for PIN or Phone,Fields contain invalid data
+,,2,Click Continue,Validation error appears for invalid PIN/Phone
+
+
+15,Payment – Valid Card,1,On Payment screen, enter valid Card Number, Expiration Date, Security Code,All fields valid
+,,2,Click “Pay Now”,Payment processed, user redirected to Confirmation page
+
+
+16,Payment – Invalid Card Details,1,Enter invalid Card Number (e.g., 1111),Card details invalid
+,,2,Click Pay Now,Error message for invalid card
+
+
+17,Payment – Missing Details,1,Leave one or more payment fields blank,Fields incomplete
+,,2,Click Pay Now,Error for missing required fields
+
+
+18,Payment – Expired Card,1,Enter expired expiration date,Date invalid
+,,2,Click Pay Now,Error for expired card
+
+
+19,Confirmation Page – Data Verification,1,After successful purchase, reach Confirmation Page,Confirmation is displayed
+,,2,Review product, delivery and payment summary, order ID,All details are accurate and match completed purchase

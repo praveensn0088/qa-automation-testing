@@ -1,0 +1,39 @@
+{
+  "features": [
+    "Receive and process audio recordings from external teams",
+    "Support integration with S3 or similar cloud storage for content retrieval",
+    "Authenticate and access shared media links securely",
+    "Automate the extraction of recording content for further processing or analysis"
+  ],
+  "workflows": [
+    {
+      "name": "External Recording Processing Workflow",
+      "steps": [
+        "Receive request from another team for processing a recording",
+        "Obtain the recording access link (e.g., S3 bucket URL)",
+        "Authenticate and retrieve the recording from the given link",
+        "Process and transcribe/handle the recording as required",
+        "Return results or status to the requesting team"
+      ]
+    }
+  ],
+  "business_rules": [
+    "All external recording requests must provide a valid and accessible link",
+    "Recordings are processed only after successful authentication and access",
+    "Results or processing status must be communicated back to the requesting team"
+  ],
+  "domain_concepts": [
+    {
+      "name": "Domain Agent",
+      "description": "A service or application responsible for processing received recordings or media content, especially from external sources."
+    },
+    {
+      "name": "External Link Access",
+      "description": "Capability to connect to, authenticate, and download content from a given remote storage location such as an S3 bucket."
+    },
+    {
+      "name": "Processing Request",
+      "description": "A formal request by another team or user to process and handle a provided recording."
+    }
+  ]
+}

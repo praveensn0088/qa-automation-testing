@@ -1,0 +1,35 @@
+Sr.No,Test Scenario Name,Step Num,Test Step,Expected Results
+1,Signup – Successful Registration,1,Navigate to the homepage and click 'Sign Up' or 'Register',Signup page is displayed
+,,2,Enter valid First Name,Last Name, Email, and Password fields,All field values are accepted
+,,3,Click the 'Submit' button,User account is created; Redirected to the login page or logged in automatically
+,,4,Verify welcome message or account creation message is shown,Success message displayed
+
+1,Signup – Missing/Invalid Field Validation,1,Leave one or more required fields blank and click 'Submit',Appropriate validation error message is displayed per field
+,,2,Enter invalid email format and click 'Submit',"Email must be valid" validation error shown
+,,3,Enter weak password and click 'Submit',"Password does not meet requirements" error shown
+
+2,Login – Valid Credentials,1,Navigate to login page and enter valid Email and Password,Fields accept input
+,,2,Click 'Login' button,Redirected to product listing page
+
+2,Login – Invalid Credentials,1,Enter incorrect Email or Password and click 'Login',Login error message displayed and user remains on login page
+
+3,Product Browsing & Adding to Cart,1,After login, view the Product Listing page,Product list with names and prices is displayed
+,,2,Click 'Add to Cart' on a product,Selected product is added to cart
+,,3,Open 'My Cart' or view cart overlay,Cart shows correct product, quantity, price, and total
+
+3,Cart Functionality – Quantity & Price Accuracy,1,Add multiple items/products to cart,Cart updates with multiple products, correct quantities and total price
+,,2,Remove an item from cart,Removed item no longer listed; cart total adjusted
+
+4,Checkout – Address Entry & Validation,1,From cart, click 'Check Out' button,Navigated to checkout/delivery form
+,,2,Fill all address fields (Address, Country, City, State, PIN, Phone) with valid data,All fields accept data
+,,3,Click 'Continue' or 'Next',Proceeds to payment step
+,,4,Leave one or more address fields blank or invalid,Appropriate validation error shown; cannot proceed
+
+5,Payment – Successful Payment,1,Enter valid card number, expiration date, and security code,All info accepted
+,,2,Click 'Pay Now',Redirected to confirmation page
+
+5,Payment – Invalid Details,1,Enter invalid card number and click 'Pay Now',Error message: "Invalid card number" shown; not redirected
+,,2,Leave fields blank and click 'Pay Now',Error message for required fields shown
+
+6,Order Confirmation,1,On confirmation page, verify displayed details,Page shows Product(s), delivery address, payment summary, and Order ID
+

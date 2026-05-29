@@ -1,0 +1,70 @@
+Sr.No,Test Scenario Name,Step Num,Test Step,Expected Results
+1,Signup with Valid Details,1,Navigate to homepage and select Sign Up,Sign Up page is displayed
+,,,,
+, ,2,Enter valid First Name, Last Name, Email, Password,Fields accept text input
+, ,3,Click Submit,User account is created, redirected to login or automatically logged in
+
+,Signup with Blank Fields,1,Navigate to Sign Up page,Sign Up page is displayed
+, ,2,Click Submit without entering any values,Validation errors are shown for all mandatory fields
+
+,Signup with Invalid Email,1,Navigate to Sign Up page,Sign Up page is displayed
+, ,2,Enter invalid email and valid other fields,Invalid email format is accepted as input
+, ,3,Click Submit,Validation error for invalid email is displayed
+
+,Signup with Weak Password,1,Navigate to Sign Up page,Sign Up page is displayed
+, ,2,Enter weak password and valid other fields,Weak password is accepted as input
+, ,3,Click Submit,Validation error for password complexity (if enforced) is displayed
+
+2,Login with Valid Credentials,1,Navigate to Login page,Login page is displayed
+, ,2,Enter registered email and password,Fields accept text input
+, ,3,Click Log In,User is redirected to product listing page
+
+,Login with Invalid Credentials,1,Go to Login page,Login page is displayed
+, ,2,Enter unregistered/wrong email or password,Input is accepted
+, ,3,Click Log In,Appropriate error message is shown
+
+3,Add Single Product to Cart,1,Login with valid credentials,Product listing page is displayed
+, ,2,Click Add to Cart on a product,Product is added; cart icon/count updates
+, ,3,Open My Cart,Added product is listed with name, price, quantity, total
+
+,Add Multiple Products to Cart,1,Login and view product list,Product listing page is displayed
+, ,2,Add multiple different products to cart,Each product is added; cart count increases accordingly
+, ,3,Open My Cart,All products are listed with correct details and totals
+
+,Empty Cart Checkout Attempt,1,Login and go to My Cart with no products,Cart displays as empty
+, ,2,Attempt to click Check Out,User cannot proceed; warning or cart remains
+
+,Remove Product from Cart,1,Add product(s) to cart and open My Cart,Product(s) appear in cart section
+, ,2,Remove an item,Item is removed; cart updates
+
+4,Checkout with Valid Address,1,Login and add product(s) to cart,Cart displays with products
+, ,2,Open My Cart and click Check Out,Checkout page with address form is displayed
+, ,3,Enter valid Address, Country, City, State, PIN code, Phone,Fields accept valid values
+, ,4,Click Continue,System proceeds to payment page
+
+,Checkout with Blank Address Fields,1,At address step, leave all fields blank,Fields are left empty
+, ,2,Click Continue,Validation errors are shown for each field
+
+,Checkout with Invalid PIN/Phone,1,At address step, enter invalid PIN code or phone (e.g., non-numeric),Invalid values are accepted as input
+, ,2,Click Continue,Field(s) show validation errors
+
+5,Payment with Valid Card,1,At payment step, enter valid card number, expiration, security code,Fields accept valid entries
+, ,2,Click Pay Now,Payment processes; user redirected to confirmation page
+, ,3,Review confirmation page,Order ID, product, address, and payment summary are displayed
+
+,Payment with Invalid Card Number,1,At payment step, enter invalid card number,Invalid card number is accepted as input
+, ,2,Click Pay Now,Error message for invalid card is displayed
+
+,Payment with Blank Payment Fields,1,Leave payment fields empty,Fields are blank
+, ,2,Click Pay Now,Validation errors for required fields are shown
+
+6,Signup with Existing Email,1,Attempt to sign up with an email already used,Input is accepted
+, ,2,Click Submit,System shows error that email already exists
+
+,Session Timeout During Checkout,1,Login, add product, go to checkout, then wait/session expires,Session times out
+, ,2,Attempt to continue or pay,User is redirected to login or error about timeout is shown
+
+,Mobile Responsiveness Check,1,Repeat sign up, login, cart, and checkout flows from mobile device/browser,UI adjusts responsively and all actions succeed without layout or flow issue
+
+,Localization Check (if applicable),1,Switch site language/localization, repeat key flows,All elements and messages adapt to selected locale/language
+
