@@ -1,0 +1,9 @@
+Push automation test framework repository from '{localPath}' to Bitbucket workspace '{workspace}',
+repository '{repo_slug}', branch '{branch}'.
+
+EXECUTE THESE STEPS EXACTLY:
+
+1. listBranches('{workspace}', '{repo_slug}') → Verify repo/branch access
+2. commitChanges('{workspace}', '{repo_slug}', '{branch}', '{localPath}')
+
+SUCCESS OUTPUT ONLY:

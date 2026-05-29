@@ -1,0 +1,44 @@
+
+This task involves generating Playwright automation test cases based on manual test inputs.
+
+Use the following file paths provided via arguments:
+- Input file: {AIOutput}
+- Automation repository: {AI_Auto_Repo_Path}
+
+Steps:
+1. Check if the input file exists. If not, pause until it becomes available.
+2. If the automation repo folder does not exist, create it and initialize a playwright framework.
+3. If the repo exists, compare its contents with the input test cases and generate BDD-style automation scripts.
+4. Coordinate with a helper agent to create necessary files and folders. Wait for confirmation before proceeding.
+5. Ensure the final project runs successfully in Chrome. Once complete, print "REPO CREATED" and display the repo path.
+6. Follow below folder structure and create a modularized framework along with all necessary support and Test methods
+7. Create all the subfolders and subsequent files with all necessary support and Test Methods
+8. Match and Create the subfolders structure and files explicitly
+
+
+	{AI_Auto_Repo_Path}/
+	├── integration/
+	│   ├── features/              # Gherkin-based .feature files
+	│   │   └──sample.feature
+	│   ├── step-definitions/      # Step definitions mapping Gherkin steps
+	│   │   └──sampleSteps.js
+	├── pages/                     # for encapsulated Page Object classes
+	│   └──LoginPage.js
+	├── objectRepo/                # for dynamic selectors and page-specific locators
+	│   └──loginSelectors.js
+	├── utils/                     # for reusable utilities and helper functions
+	│   └──helpers.js
+	├── fixtures/
+│   	└──Test
+			└──envData.json
+		└──UAT
+			└──envData.json
+- Externalize environment-specific data (URLs, credentials, etc.) using **config files or environment variables**.
+-Follow best practices for naming, structure, and code quality throughout.
+-methods in the pages should be well-defined to wait for the locator is appeared and the do click, type or any other action
+- run script defined in package.json for test:chrome should provide right path with escape slash
+- import chromium in step definition file. Wait sync to be added where ever required.
+- hooks.js to have setDefaultTimeout(60 * 1000)
+- screenshot command on completion on every testcase
+- url launch value should not be fetched from pages instead fetched from env
+IMP : Follow the coding best practices while creating the file, writing the code, naming conventions for all the files, methods, variables, args etc.

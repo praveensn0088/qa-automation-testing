@@ -1,0 +1,7 @@
+Update input file with these requirements: {user_prompt}
+
+WORKFLOW:
+1. READ from: {input_file}
+2. APPLY updates
+3. WRITE to: {AI_Auto_Repo}
+

@@ -1,0 +1,19 @@
+Use the following file paths provided via arguments:
+- Story Document : {inputData_path}
+- Manual Test Cases path : {AIOutput}
+
+As a Quality Assurance and Quality Engineering team, you need to read the requirements from {inputData_path} and
+create manual test cases with all positive and negative test cases in a proper format with below format.
+Each test case should follow this format:
+Sr.No | Test Scenario Name | Step Num | Test Step | Expected Results
+
+Once all test cases are generated you will need to Save all the test cases into a CSV file located at: {AIOutput} and filename as {fileName}.
+While saving:
+- Do not repeat Sr.No and Test Scenario Name for steps within the same scenario.
+- Leave one empty row after each complete test scenario to improve readability.
+
+Read the manual test cases document and automate all the test cases using Playwright - Javascript.
+
+Steps:
+1. Check if the input file exists. If not, pause until it becomes available.
+2. Coordinate with a helper agent to create necessary files and folders. Wait for confirmation before proceeding.
